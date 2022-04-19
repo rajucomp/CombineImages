@@ -34,7 +34,7 @@ axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
     return;
 })
 
-CombineAndSaveImage(firstRequestBody, secondRequestBody);
+CombineAndSaveImage(responseOne, responseTwo);
 
 function CombineAndSaveImage(firstRequestBody, secondRequestBody) {
     let firstImage = new Buffer(firstRequestBody, 'binary');
